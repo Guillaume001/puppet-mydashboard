@@ -1,0 +1,10 @@
+---
+
+mydashboard::fakeroot: false
+
+mydashboard::owner: 'root'
+mydashboard::group: 'root'
+mydashboard::bindir: '/usr/bin'
+mydashboard::confdir: '/etc/mydashboard'
+mydashboard::documentroot: '/etc/mydashboard/docroot'
+

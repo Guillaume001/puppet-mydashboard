@@ -1,0 +1,8 @@
+{
+  <% if @menu -%>
+  <% @menu.each do |msg, url| -%>
+  "<%= msg -%>": "<%= url -%>",
+  <% end -%>
+  <% end -%>
+  "Help": "/doc"
+}
