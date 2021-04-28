@@ -15,6 +15,7 @@ class mydashboard::config (
   $documentroot      = $::mydashboard::documentroot,
   $debug_filename    = $::mydashboard::debug_filename,
   $remote_connection = $::mydashboard::remote_connection,
+  $css_custom_groups = $::mydashboard::css_custom_groups,
 ){
 
     file {$confdir:
@@ -32,5 +33,13 @@ class mydashboard::config (
         content => template('mydashboard/mydashboard.conf.erb')
     }
 
+
+    file {"${documentroot}/mydashboard-custom.css":
+        ensure  => file,
+        owner   => $owner,
+        group   => $group,
+        mode    => '0644',
+        content => template('mydashboard/mydashboard-.css.erb')
+    }
 
 }

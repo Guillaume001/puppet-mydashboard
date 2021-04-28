@@ -1,0 +1,10 @@
+# Managed by puppet
+<% if @css_custom_groups %>
+  <% @css_custom_groups.each  do | group, attrs | -%>
+  .group-<%= group %> {
+    <% @attrs.each do | attr, value | -%>
+      <%= attr %>: <%= value %>;
+    <% end -%>
+  }
+  <% end -%>
+<% end -%>

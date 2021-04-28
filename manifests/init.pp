@@ -20,6 +20,8 @@ class mydashboard (
   $documentroot      = "${confdir}/docroot",
   $debug_filename    = '~/mydashboard.log',
   $remote_connection = '/usr/bin/echo',
+
+  $css_custom_groups = [],
 ){
 
     include ::mydashboard::install
