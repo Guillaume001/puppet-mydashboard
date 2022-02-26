@@ -11,12 +11,12 @@ class mydashboard::menu (
   $confdir = $::mydashboard::confdir,
 ){
 
-    file {"${confdir}/menu.conf":
+    file {"${confdir}/menu.json":
         ensure  => file,
         owner   => $owner,
         group   => $group,
         mode    => '0644',
-        content => template('mydashboard/menu.conf.erb')
+        content => template('mydashboard/menu.json.erb')
     }
 
 }
