@@ -39,7 +39,7 @@ class mydashboard::config (
         owner   => $owner,
         group   => $group,
         mode    => '0644',
-        content => template('mydashboard/mydashboard-.css.erb')
+        content => template('mydashboard/mydashboard-custom.css.erb')
     }
 
 }
