@@ -2,7 +2,7 @@
 <% if @css_custom_groups %>
   <% @css_custom_groups.each  do | group, attrs | -%>
   .group-<%= group %>,
-  .group-<%= group %>:hover
+  .group-<%= group %>:hover,
   .group-<%= group %>:disabled {
     <% @attrs.each do | attr, value | -%>
       <%= attr %>: <%= value %>;
